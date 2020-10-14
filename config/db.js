@@ -8,6 +8,6 @@ const  connectDB = async () => {
         useFindAndModify: false,
         useUnifiedTopology: true
     })
-    console.log('MongoDB  connected')
+    console.log('MongoDB is connected')
 }
 module.exports = connectDB;
