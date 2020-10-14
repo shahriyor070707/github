@@ -1,11 +1,23 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const app = express()
-const searchRouter = require('./routes/search')
+const app = express();
 
-app.use('/search' , searchRouter)
+// -------- filter --------
+const filterRouter = require('./routes/search')
+app.use('/filter', filterRouter)
+
+// -------- sorting --------
+const sortingRout = require('./routes/sorting')
+app.use('/sort', sortingRout)
+
+// -------- mongoDB --------
+const connectDB = require('./config/db');
+connectDB();
+
+
+
 
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log('Server ishlayapti')
-})
+    console.log(`${PORT} port ishlayapti`)
+});

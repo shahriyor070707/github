@@ -12,4 +12,4 @@ class Filter {
         })
     }
 }
-module.exports = Filter
+module.exports = Filter;

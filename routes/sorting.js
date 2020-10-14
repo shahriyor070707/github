@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { filter } = require('../controller/search')
-router.get('/', filter);
+const{sort} = require('../controller/sorting')
+router.get('/', sort)
 
 module.exports = router;
